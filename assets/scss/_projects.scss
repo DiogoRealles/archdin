@@ -2,6 +2,7 @@
 
 .projects {
   padding-block: 10rem;
+  background: $dark-200;
 
   .container {
     header {
@@ -24,10 +25,7 @@
         flex: 1;
         width: 100%;
         max-width: 75rem;
-        font-size: 1.8rem;
         color: $light-100;
-        font-weight: 500;
-        font-family: $font-title;
       }
     }
 
@@ -54,7 +52,8 @@
           z-index: 10;
           padding: 0.8rem 1.6rem;
           background: $light-100;
-          color: $dark-100;
+          color: $dark-200;
+          letter-spacing: 0.2rem;
           border-radius: 4px;
           font-weight: 700;
           font-family: $font-body;
@@ -93,7 +92,8 @@
     }
 
     .button {
-      filter: invert(1);
+      background: $light-100;
+      color: $dark-200;
       margin-inline: auto;
       display: table;
     }

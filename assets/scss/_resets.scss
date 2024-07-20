@@ -1,25 +1,25 @@
 @use './variables' as *;
 
-:root{
+:root {
   font-size: 62.5%;
 }
 
-::selection{
-  background: $dark-100;
+::selection {
+  background: $dark-200;
   color: $light-100;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   font-family: $font-body;
   font-weight: 400;
   background: $dark-100;
@@ -27,40 +27,67 @@ body{
   font-size: 1.6rem;
 }
 
-ul, li{
+ul,
+li {
   list-style: none;
 }
 
-img{
+img {
   max-width: 100%;
   display: block;
   object-fit: cover;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-button{
+button {
   background-color: transparent;
   cursor: pointer;
   border: none;
 }
 
-.button{
+.button {
   text-decoration: none;
-  background: $dark-100;
+  background: $dark-200;
   color: $light-100;
   padding: 1.8rem 4rem;
   border-radius: 4px;
+  font-weight: 600;
   display: inline-block;
   font-size: 18px;
   transform: scale(1);
-  transition: all .3s ease-in-out;
-  font-family: $font-title;
+  transition: all 0.3s ease-in-out;
+  font-family: $font-body;
+  letter-spacing: 0.2rem;
 
-  &:hover{
+  &:hover {
     transform: scale(1.05);
   }
+}
+
+p {
+  font-family: $font-body;
+  font-size: 2.2rem;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+h2 {
+  color: $dark-200;
+  font-family: $font-title;
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 120%;
+}
+
+h3 {
+  color: $dark-100;
+  font-family: $font-title;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 120%;
 }
