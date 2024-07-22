@@ -16,3 +16,8 @@ document.querySelectorAll('.faq__button').forEach((button) => {
     }
   });
 });
+
+AOS.init({
+  once: false,
+  disable: 'mobile',
+});
