@@ -21,10 +21,10 @@ html {
 
 body {
   font-family: $font-body;
-  font-weight: 400;
+  font-weight: 500;
   background: $dark-100;
-  color: $light-100;
-  font-size: 1.6rem;
+  color: $grey-100;
+  font-size: 1.8rem;
 }
 
 ul,
@@ -50,21 +50,29 @@ button {
 }
 
 .button {
-  text-decoration: none;
   background: $dark-200;
   color: $light-100;
   padding: 1.8rem 4rem;
   border-radius: 4px;
   font-weight: 600;
-  display: inline-block;
   font-size: 18px;
-  transform: scale(1);
   transition: all 0.3s ease-in-out;
   font-family: $font-body;
   letter-spacing: 0.2rem;
+  white-space: nowrap;
+  width: fit-content;
+  display: flex;
+  gap: 0.8rem;
+  position: relative;
+
+  i {
+    transition: all 0.3s ease-in-out;
+  }
 
   &:hover {
-    transform: scale(1.05);
+    i {
+      transform: translateX(20px);
+    }
   }
 }
 

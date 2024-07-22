@@ -1,0 +1,141 @@
+@use './variables' as *;
+
+.more-projects {
+  background: $light-100;
+
+  .container {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-block: 8rem;
+
+      h2 {
+        flex: 1;
+        width: 100%;
+        max-width: 70%;
+        font-size: 5.6rem;
+        color: $dark-200;
+        font-weight: 700;
+        font-family: $font-title;
+      }
+
+      p {
+        flex: 1;
+        width: 100%;
+        max-width: 30%;
+        color: $dark-200;
+      }
+    }
+  }
+
+  .gallery {
+    display: flex;
+
+    &__card {
+      width: 238px;
+      height: 300px;
+      flex: 1;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+    }
+
+    &__card::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.6)
+      );
+      position: absolute;
+      z-index: 1;
+    }
+
+    &__card img {
+      filter: grayscale(1);
+      height: 100%;
+      width: 100%;
+    }
+
+    &__card:first-child {
+      border-radius: 0.8rem 0 0 0.8rem;
+    }
+
+    &__card:last-child {
+      border-radius: 0 0.8rem 0.8rem 0;
+    }
+
+    &__card:hover {
+      flex: 3;
+    }
+
+    &__card:hover .gallery__content {
+      bottom: 0;
+    }
+
+    &__card:hover img {
+      filter: grayscale(0);
+    }
+
+    &__content {
+      position: absolute;
+      bottom: -72%;
+      left: 0;
+      width: 100%;
+      max-width: 21rem;
+      transition: all 0.3s ease-in-out;
+      padding: 1.4rem;
+      z-index: 1;
+    }
+
+    &__title {
+      font-size: 2.4rem;
+      line-height: 135%;
+      font-weight: 700;
+      color: $light-100;
+      margin-bottom: 0.4rem;
+      white-space: nowrap;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      line-height: 150%;
+      font-weight: 400;
+      color: $light-100;
+      margin-bottom: 1.6rem;
+    }
+
+    .button {
+      padding: 0.4rem 1.4rem;
+      text-align: center;
+      outline: 1px solid transparent;
+      border: 1px solid transparent;
+      border-radius: 0;
+      display: inline-block;
+      background: transparent;
+      color: $light-100;
+      font-size: 1.8rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 150%;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button.button--primary {
+      background: $dark-200;
+      color: $light-100;
+    }
+
+    .button:is(:hover, :focus) {
+      background: $dark-100;
+      outline: 1px solid $dark-100;
+      border: 1px solid $dark-100;
+    }
+  }
+}
