@@ -1,8 +1,9 @@
 @use './variables' as *;
 
 .footer {
-  padding-top: 8rem;
   background: $dark-200;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
 
   .container {
     .top {
@@ -13,8 +14,9 @@
       .left {
         flex: 2;
 
-        h2 {
+        .logo {
           color: $light-100;
+          display: inline-block;
           margin-bottom: 2.4rem;
         }
 
@@ -31,6 +33,8 @@
         flex: 1;
         display: flex;
         justify-content: space-between;
+        display: flex;
+        gap: 1.8rem;
 
         h3 {
           color: $light-100;
@@ -46,7 +50,10 @@
 
           li {
             a {
-              display: inline-block;
+              text-align: left;
+              display: flex;
+              gap: 1rem;
+              align-items: center;
               margin-bottom: 1.6rem;
               font-size: 1.8rem;
               font-weight: 400;
@@ -67,7 +74,7 @@
     .bottom {
       border-top: 2px solid $grey-100;
       text-align: center;
-      padding-block: 2.4rem;
+      padding-top: 2.4rem;
 
       p {
         font-size: 1.8rem;

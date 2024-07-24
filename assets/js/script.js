@@ -9,10 +9,10 @@ document.querySelectorAll('.faq__button').forEach((button) => {
 
     if (button.classList.contains('active')) {
       faqContent.style.maxHeight = faqContent.scrollHeight + 'px';
-      button.lastElementChild.innerHTML = '&mdash;';
+      button.lastElementChild.innerHTML = '&plus;';
     } else {
       faqContent.style.maxHeight = 0;
-      button.lastElementChild.innerHTML = '&times;';
+      button.lastElementChild.innerHTML = '&mdash;';
     }
   });
 });

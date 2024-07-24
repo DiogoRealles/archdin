@@ -1,8 +1,9 @@
 @use './variables' as *;
 
 .projects {
-  padding-block: 10rem;
   background: $dark-200;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
 
   .container {
     header {

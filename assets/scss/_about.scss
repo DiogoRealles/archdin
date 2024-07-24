@@ -2,7 +2,8 @@
 
 .about {
   background: $light-100;
-  padding-block: 14rem;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
 
   .container {
     display: flex;
@@ -64,14 +65,91 @@
 
         &:nth-child(1) {
           grid-area: 1 / 1 / 2 / 3;
+          position: relative;
+
+          .fade1 {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: fade 10s ease 0s infinite;
+          }
+
+          .fade2 {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: fade 10s ease 5s infinite;
+          }
         }
 
         &:nth-child(2) {
           grid-area: 2 / 1 / 3 / 2;
+          position: relative;
+
+          .fade3 {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: fade 10s ease 2s infinite;
+          }
+
+          .fade4 {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: fade 10s ease 7s infinite;
+          }
         }
 
         &:nth-child(3) {
           grid-area: 2 / 2 / 3 / 3;
+          position: relative;
+
+          .fade5 {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: fade 10s ease 3s infinite;
+          }
+
+          .fade6 {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: fade 10s ease 8s infinite;
+          }
+        }
+
+        @keyframes fade {
+          0% {
+            opacity: 0;
+          }
+          20%,
+          50% {
+            opacity: 1;
+          }
+          70%,
+          100% {
+            opacity: 0;
+          }
         }
       }
     }
