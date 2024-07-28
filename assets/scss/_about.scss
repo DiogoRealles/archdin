@@ -15,6 +15,10 @@
       flex: 1;
       gap: 4rem;
 
+      h2 {
+        max-width: 60rem;
+      }
+
       ul {
         display: flex;
         justify-content: space-between;
